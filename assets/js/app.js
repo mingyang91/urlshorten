@@ -3,7 +3,7 @@ angular.module('urlShorterApp',[])
 		var urlShorter= this;
 		urlShorter.done= false;
 		urlShorter.request= function(){
-			var url= 'http://?????/shorten/';
+			var url= 'http://45.77.132.141/shorten/';
 
 			var config = {
                 headers : {
@@ -19,7 +19,7 @@ angular.module('urlShorterApp',[])
 				.then(
 			    	function(response){
 			    		if(response.data.status=='OK'|| response.data.status=='registered'){
-			    			urlShorter.urlResult= 'http://localhost:8192/url/'+ response.data.short;
+			    			urlShorter.urlResult= 'http://45.77.132.141/url/'+ response.data.short;
 			    			urlShorter.done= true;
 			    		}else{
 			    			window.alert('request failed');
